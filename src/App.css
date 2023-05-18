@@ -1,0 +1,126 @@
+:root{
+  --primary: rgb(126, 84, 6);
+  --secondary: black;
+  --white: whitesmoke;
+  --gap: 15px;
+  --border-radius:10px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--white);
+}
+.App {
+  text-align: center;
+  height: 100vh;
+  padding: 0px ;
+}
+.menu{
+  padding: var(--gap)
+}
+img{
+  height: 200px;
+  width: 250px;
+  border-radius: var(--border-radius);
+  border: 3px solid var(--primary);
+}
+hr{
+  border: 2px solid rgb(173, 116, 8);
+  width: 100px;
+  margin: var(--gap) auto;
+  
+}
+h4::first-letter{
+  text-transform: capitalize;
+}
+.price-tag{
+  color:var(--primary)
+}
+.btn{
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  
+}
+button{
+  border-radius: 10px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  font-size: larger;
+  border-color:var(--primary) black black  var(--primary);
+  color: var(--primary);
+}
+button:hover{
+  background-color:var(--primary);
+  color: var(--white)
+}
+.btn-wrapper{
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+  margin: var(--gap);
+}
+.total-money{
+  display: flex;
+  justify-content:flex-end;
+  padding: 20px;
+  font-size: 35px;
+  align-items: center;
+  color: var(--primary)
+}
+.message{
+  color: var(--primary);
+}
+
+.card-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--gap);
+  padding: var(--gap);
+}
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--gap);
+  padding: 20px;
+}
+.top-container{
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 2px solid var(--secondary);
+  border-bottom-style: dotted;
+}
+.bottom-container{
+  padding: 20px;
+  text-align: justify;
+}
+.footer{
+  background-color: var(--primary);
+  padding: var(--gap);;
+}
+.footer-h1{
+  background-color: var(--primary);
+  color: whitesmoke;
+}
+.icon-wrapper{
+  margin: 20px;
+  background-color:var(--primary);
+  
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
