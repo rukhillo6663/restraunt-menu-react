@@ -16,10 +16,13 @@
   height: 100vh;
   padding: 0px ;
 }
+.deleteBtn:hover{
+  color: red;
+}
 .menu{
   padding: var(--gap)
 }
-img{
+.container img{
   height: 200px;
   width: 250px;
   border-radius: var(--border-radius);
@@ -31,7 +34,7 @@ hr{
   margin: var(--gap) auto;
   
 }
-h4::first-letter{
+h3::first-letter{
   text-transform: capitalize;
 }
 .price-tag{
@@ -42,6 +45,10 @@ h4::first-letter{
   flex-direction: column;
   width: 150px;
   
+}
+.shopping-list{
+  display: flex;
+  justify-content: flex-end;
 }
 button{
   border-radius: 10px;
@@ -73,7 +80,6 @@ button:hover{
 .message{
   color: var(--primary);
 }
-
 .card-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -100,7 +106,7 @@ button:hover{
 }
 .footer{
   background-color: var(--primary);
-  padding: var(--gap);;
+  padding: var(--gap);
 }
 .footer-h1{
   background-color: var(--primary);
@@ -111,6 +117,54 @@ button:hover{
   background-color:var(--primary);
   
 }
+.single-item{
+  width: 90vw;
+  height: 70vh;
+  border: 5px solid var(--primary);
+  margin:  10px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+}
+.item-left{
+  width: 70%;
+  height: 100%;
+  margin:  auto;
+}
+.item-right{
+  width: 50%;
+  height: 97%;
+  margin: 10px auto;
+  padding: 5px 10px;
+}
+.item-left img{
+  width: 100%;
+  height:100%;
+}
+.shoppingList-container{
+  padding: var(--gap);
+}
+.text{
+  text-align: justify;
+}
+
+.shopping-item{
+  display: flex;
+  justify-content:space-around;
+  padding: 20px;
+  font-size: 35px;
+  align-items:flex-start;
+  color: var(--primary);
+}
+.shopping-item img{
+  width: 300px;
+  height: 250px;
+  border-radius: var(--border-radius);
+  border: 3px solid var(--primary);
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

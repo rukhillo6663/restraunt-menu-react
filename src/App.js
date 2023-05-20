@@ -1,13 +1,20 @@
 import "./App.css";
 import React from "react";
 import { useEffect, useState } from "react";
-import {MdOutlineAttachMoney} from 'react-icons/md'
 
+
+import {FaShoppingCart} from 'react-icons/fa'
+
+import {Routes, Route,Link} from 'react-router-dom'
 
 
 import Button from "./components/Button";
 import Card from './components/Card';
 import Footer from "./components/Footer";
+import Home from './components/Home'
+import About from "./pages/About";
+import ShoppingList from "./pages/ShoppingList";
+
 
 
 const url =
@@ -35,23 +42,28 @@ const App =()=> {
       const fetchData = await promise.json();
       setData( fetchData);
       setActiveMenu(fetchData)
-      console.log(fetchData)
   };
  
   //Add to shopping list
   const addToShoppingList=(menuItem) =>{
-    if(!shoppingList.includes(menuItem)){
-      
-       
-      setTotal(Math.ceil(total+menuItem.price))
+    if (!shoppingList.includes(menuItem)) 
+    {
+      setTotal((Number(total)+menuItem.price).toFixed(2))
       setShoppingList([...shoppingList,menuItem])
       setMessage('')
 
-    } else{
-      setMessage(`${menuItem.title.toUpperCase()} already been added`)
-    }
- 
-    
+    } else 
+    {
+      setMessage(`${menuItem.title.toUpperCase()} has already been added`)
+    } 
+  }
+  //Remove from shopping list function
+  const deleteFromShoppingList=(id, price)=>{
+    const filteredList=shoppingList.filter(item=>item.id !==id)
+    setTotal((Number(total)-price).toFixed(2))
+    setShoppingList(filteredList)
+  
+
   }
 
   //Breakfast menu list
@@ -78,33 +90,54 @@ const App =()=> {
    
     return (
       <div className="App">
-        <h1 className="menu">Our Menu
-        <hr></hr></h1>
+
+           <Home total={total}/>
+
+      <Routes>
+        < Route path="/" element={
+          <>
+          <div className="btn-wrapper">
+           <Button content={"All"} funct={displayAll} />
+           <Button content={"Breakfast"} funct={funcBreakfast} />
+           <Button content={"Lunch"} funct={funcLunch} />
+           <Button content={"Shakes" }funct={funcShakes }/>
+           <Button content={"Dinner"}  funct={funcDinner}/>
+         </div>
+
+         <div className="shopping-list">
+        <Link to='/shoppinglist' style={{textDecoration:'none', padding:'20px',color:'rgb(126, 84, 6)' }} >
+           <FaShoppingCart size={50}/>
+        </Link>
+         </div>
+           
        
-        
-        
-        <div className="btn-wrapper">
-        <Button content={"All"} funct={displayAll} />
-        <Button content={"Breakfast"} funct={funcBreakfast} />
-        <Button content={"Lunch"} funct={funcLunch} />
-        <Button content={"Shakes" }funct={funcShakes }/>
-        <Button content={"Dinner"}  funct={funcDinner}/>
-        </div>
-        <div class="total-money">  Total:<MdOutlineAttachMoney size={35} style={{color:' rgb(126, 84, 6)'}}/>{total}</div>
-        <h1 className="message">{message}</h1>
+           <h1 className="message">{message}</h1>
       
       
-        {/* <Card cardData={this.state.data} /> */}
-       <div className="card-wrapper">    
-        {activeMenu !== "" &&
+        
+          <div className="card-wrapper">    
+          {activeMenu !== "" &&
           activeMenu.map((menu) => {
            
             return (
               <Card menu={menu} addToShoppingList={addToShoppingList}/> 
             );
           })}
-        </div>
+          </div>
+       
+           </>
+        }/>
+        <Route exact path="/about/:title" element={
+          <About menu={activeMenu}/>
+        }/>
+        <Route exact path="/shoppinglist/" element={
+          <ShoppingList itemList={shoppingList} deleteFromShoppingList={deleteFromShoppingList}/>
+        }/>
+        <Route path="*" element={<h1>Page not found</h1>}/>
         
+        
+        
+        </Routes>
         <Footer/>
         
       </div>
