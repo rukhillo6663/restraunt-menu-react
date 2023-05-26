@@ -1,0 +1,37 @@
+:root{
+  --primary: rgb(126, 84, 6);
+  --secondary: black;
+  --white: whitesmoke;
+  --gap: 15px;
+  --border-radius:10px;
+}
+.wishList-container{
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wish-item{
+  display: flex;
+  justify-content:space-around;
+  padding: 20px;
+  font-size: 35px;
+  width: 60%;
+  align-items:flex-start;
+  color: var(--primary);
+}
+.wish-item img{
+  width: 50%;
+  height: 70%;
+  border-radius: 15px;
+  border-color: var(--primary);
+}
+
+.deleteBtn:hover{
+  color: var(--secondary);
+  cursor: pointer;
+}
+.deleteBtn:hover{
+    color: var(--secondary);
+    cursor: pointer;
+}

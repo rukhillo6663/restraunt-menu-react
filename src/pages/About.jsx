@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/About.css'
 import { useParams, Link } from 'react-router-dom'
 import {AiFillHome} from 'react-icons/ai'
 
@@ -12,9 +13,7 @@ function About({menu}) {
   return (
     <>
     
-    <Link to='/' style={{ display:'flex', justifyContent  :'flex-end',
-    padding:'0px 20px',
-    textDecoration: 'none', color:'rgb(126, 84, 6)'}}><h2 ><AiFillHome size={30}/> </h2></Link>
+    <Link to='/'  className='home-icon'><h2 ><AiFillHome/> </h2></Link>
     <h1>{title.toUpperCase()}</h1>
     <div className='single-item'>
       <div className='item-left'>

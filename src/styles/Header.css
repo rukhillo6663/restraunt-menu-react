@@ -1,0 +1,21 @@
+:root{
+  --primary: rgb(126, 84, 6);
+  --secondary: black;
+  --white: whitesmoke;
+  --gap: 15px;
+  --border-radius:10px;
+}
+.menu-container{
+    text-decoration: none;
+    color: black;
+    padding: var(--gap);
+    font-size: 20px;
+  }
+  .total-money{
+    display: flex;
+    justify-content:flex-end;
+    padding: 20px;
+    font-size: 35px;
+    align-items: center;
+    color: var(--primary)
+  }

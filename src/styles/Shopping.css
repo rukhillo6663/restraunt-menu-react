@@ -1,0 +1,29 @@
+:root{
+    --primary: rgb(126, 84, 6);
+    --secondary: black;
+    --white: whitesmoke;
+    --gap: 15px;
+    --border-radius:10px;
+  }
+.shoppingList-container{
+    padding: var(--gap);
+}
+.shopping-item{
+    display: flex;
+    justify-content:space-around;
+    padding: 20px;
+    font-size: 35px;
+    align-items:flex-start;
+    color: var(--primary);
+}
+.price-container{
+    font-size: 35px;
+    color: var(--primary);
+}
+.deleteBtn:hover{
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+
+

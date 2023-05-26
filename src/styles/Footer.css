@@ -1,0 +1,26 @@
+:root{
+  --primary: rgb(126, 84, 6);
+  --secondary: black;
+  --white: whitesmoke;
+  --gap: 15px;
+  --border-radius:10px;
+}
+.footer{
+  background-color: var(--primary);
+  padding: var(--gap);
+}
+.footer-h1{
+  background-color: var(--primary);
+  color: whitesmoke;
+}
+.icon-wrapper{
+  margin: 20px;
+  background-color:var(--primary);
+  
+}
+.footer-icon{
+  color: whitesmoke;
+  background-color: var(--primary);
+  margin: 10px;
+  font-size: 20px;
+}

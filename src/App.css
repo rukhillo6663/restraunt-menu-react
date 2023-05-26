@@ -16,18 +16,6 @@
   height: 100vh;
   padding: 0px ;
 }
-.deleteBtn:hover{
-  color: red;
-}
-.menu{
-  padding: var(--gap)
-}
-.container img{
-  height: 200px;
-  width: 250px;
-  border-radius: var(--border-radius);
-  border: 3px solid var(--primary);
-}
 hr{
   border: 2px solid rgb(173, 116, 8);
   width: 100px;
@@ -37,45 +25,16 @@ hr{
 h3::first-letter{
   text-transform: capitalize;
 }
-.price-tag{
-  color:var(--primary)
-}
-.btn{
-  display: flex;
-  flex-direction: column;
-  width: 150px;
-  
-}
 .shopping-list{
   display: flex;
   justify-content: flex-end;
 }
-button{
-  border-radius: 10px;
-  padding: 10px;
-  width: 100px;
-  text-align: center;
-  font-size: larger;
-  border-color:var(--primary) black black  var(--primary);
-  color: var(--primary);
-}
-button:hover{
-  background-color:var(--primary);
-  color: var(--white)
-}
+
 .btn-wrapper{
   display: flex;
   justify-content: center;
   gap: var(--gap);
   margin: var(--gap);
-}
-.total-money{
-  display: flex;
-  justify-content:flex-end;
-  padding: 20px;
-  font-size: 35px;
-  align-items: center;
-  color: var(--primary)
 }
 .message{
   color: var(--primary);
@@ -86,84 +45,12 @@ button:hover{
   grid-gap: var(--gap);
   padding: var(--gap);
 }
-.container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: var(--gap);
-  padding: 20px;
+.shopping-list-item{
+  text-decoration: none;
+  padding: 20px 30px;
+  color:var(--primary);
+  font-size: 50px;
 }
-.top-container{
-  display: flex;
-  padding: 5px;
-  flex-direction: row;
-  justify-content: space-around;
-  border-bottom: 2px solid var(--secondary);
-  border-bottom-style: dotted;
-}
-.bottom-container{
-  padding: 20px;
-  text-align: justify;
-}
-.footer{
-  background-color: var(--primary);
-  padding: var(--gap);
-}
-.footer-h1{
-  background-color: var(--primary);
-  color: whitesmoke;
-}
-.icon-wrapper{
-  margin: 20px;
-  background-color:var(--primary);
-  
-}
-.single-item{
-  width: 90vw;
-  height: 70vh;
-  border: 5px solid var(--primary);
-  margin:  10px auto;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  border-radius: 20px;
-}
-.item-left{
-  width: 70%;
-  height: 100%;
-  margin:  auto;
-}
-.item-right{
-  width: 50%;
-  height: 97%;
-  margin: 10px auto;
-  padding: 5px 10px;
-}
-.item-left img{
-  width: 100%;
-  height:100%;
-}
-.shoppingList-container{
-  padding: var(--gap);
-}
-.text{
-  text-align: justify;
-}
-
-.shopping-item{
-  display: flex;
-  justify-content:space-around;
-  padding: 20px;
-  font-size: 35px;
-  align-items:flex-start;
-  color: var(--primary);
-}
-.shopping-item img{
-  width: 300px;
-  height: 250px;
-  border-radius: var(--border-radius);
-  border: 3px solid var(--primary);
-}
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
